@@ -1,3 +1,5 @@
+"""Entrypoint module for ``rst-budoux2psuedoxml``."""
+
 import argparse
 from pathlib import Path
 
@@ -10,7 +12,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("src", type=Path)
 
 
-def main():
+def main():  # noqa: D103
     args = parser.parse_args()
     document = publish_doctree(args.src.read_text())
     budoux_parser = budoux.load_default_japanese_parser()

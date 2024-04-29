@@ -1,3 +1,5 @@
+"""Entrypoint module for ``rst-budoux2html``."""
+
 import argparse
 from pathlib import Path
 
@@ -12,18 +14,18 @@ parser = argparse.ArgumentParser()
 parser.add_argument("src", type=Path)
 
 
-class CustomHTMLWriter(html5_polyglot.Writer):
-    def __init__(self):
+class CustomHTMLWriter(html5_polyglot.Writer):  # noqa: D101
+    def __init__(self):  # noqa: D107
         super().__init__()
         self.translator_class = CustomHTMLTranslator
 
 
-class CustomHTMLTranslator(html5_polyglot.HTMLTranslator):
+class CustomHTMLTranslator(html5_polyglot.HTMLTranslator):  # noqa: D101
     visit_WordBreak = html.visit_word_break
     depart_WordBreak = html.depart_word_break
 
 
-def main():
+def main():  # noqa: D103
     args = parser.parse_args()
     document = publish_doctree(args.src.read_text())
     budoux_parser = budoux.load_default_japanese_parser()
