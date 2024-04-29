@@ -5,6 +5,24 @@ description = "Text splitter in reStructuredText by BudouX"
 authors = [
     { name = "Kazuya Takei", email = "myself@attakei.net" }
 ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Extension",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+]
 dependencies = [
     "docutils~=0.21.2",
     "budoux~=0.6.2",
@@ -12,6 +30,10 @@ dependencies = [
 readme = "README.rst"
 requires-python = ">= 3.8"
 license = { text = "Apache-2.0" }
+
+[project.urls]
+Repository = "https://github.com/attakei-lab/rst-budoux"
+Issues = "https://github.com/attakei-lab/rst-budoux/issues"
 
 [project.scripts]
 "rst-budoux2html" = "rst_budoux.cli.html:main"
@@ -26,6 +48,21 @@ managed = true
 dev-dependencies = [
     "esbonio~=0.16.4",
 ]
+
+[tool.rye.scripts]
+setup = {chain = ["setup:sync", "setup:pre-commit"]}
+"setup:sync" = "rye sync --no-lock --all-features"
+"setup:pre-commit" = "pre-commit install"
+
+
+[tool.ruff.lint]
+select = ["C90", "D", "E", "F", "I", "W"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.doc8]
+ignore = ["D000"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
