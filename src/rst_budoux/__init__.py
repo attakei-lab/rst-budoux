@@ -16,6 +16,7 @@ def parse_all_sentences(
     all_text = list(document.findall(nodes.Text))
     for node in all_text:
         parent = node.parent
+        idx = parent.index(node)
         tokens = parser.parse(str(node))
         children = []
         for token in tokens:
@@ -23,6 +24,6 @@ def parse_all_sentences(
             children.append(WordBreak())
         children.pop()
         parent.remove(node)
-        for child in children:
-            parent.append(child)
+        for child in reversed(children):
+            parent.insert(idx, child)
     return document
