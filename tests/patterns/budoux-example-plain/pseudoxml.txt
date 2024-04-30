@@ -1,0 +1,9 @@
+<document source="<string>">
+    <paragraph>
+        あなたに
+        <word-break>
+        寄り添う
+        <word-break>
+        最先端の
+        <word-break>
+        テクノロジー。

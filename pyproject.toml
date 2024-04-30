@@ -47,13 +47,14 @@ build-backend = "hatchling.build"
 managed = true
 dev-dependencies = [
     "esbonio~=0.16.4",
+    "pytest~=8.2.0",
 ]
 
 [tool.rye.scripts]
 setup = {chain = ["setup:sync", "setup:pre-commit"]}
 "setup:sync" = "rye sync --no-lock --all-features"
 "setup:pre-commit" = "pre-commit install"
-
+test = "pytest"
 
 [tool.ruff.lint]
 select = ["C90", "D", "E", "F", "I", "W"]
