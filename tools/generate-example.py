@@ -6,6 +6,7 @@ from pathlib import Path
 import budoux
 from docutils import nodes
 from docutils.core import publish_doctree, publish_from_doctree
+from playwright.sync_api import sync_playwright
 from rst_budoux import parse_all_sentences
 from rst_budoux.cli.html import CustomHTMLWriter
 
@@ -64,6 +65,17 @@ def main():  # noqa: D103
                 },
             ).decode("utf-8")
         )
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page()
+        page.set_viewport_size({"width": 240, "height": 100})
+        page.goto(f"file://{HERE / 'example-rst.txt'}")
+        page.screenshot(path=env_dir / "source.png")
+        page.set_viewport_size({"width": 170, "height": 100})
+        page.goto(f"file://{env_dir / 'without-budoux.html'}")
+        page.screenshot(path=env_dir / "without-budoux.png")
+        page.goto(f"file://{env_dir / 'with-budoux.html'}")
+        page.screenshot(path=env_dir / "with-budoux.png")
 
 
 if __name__ == "__main__":
