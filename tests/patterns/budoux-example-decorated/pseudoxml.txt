@@ -1,0 +1,15 @@
+<document source="<string>">
+    <paragraph>
+        <reference name="あなた" refuri="http://example.com">
+            あなた
+        <target ids="target-1" names="あなた" refuri="http://example.com">
+         に
+        <word-break>
+        寄り添う
+        <word-break>
+         
+        <strong>
+            最先端
+         の
+        <word-break>
+        テクノロジー。
