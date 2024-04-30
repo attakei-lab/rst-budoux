@@ -6,6 +6,7 @@ from pathlib import Path
 import budoux
 from docutils import nodes
 from docutils.core import publish_doctree, publish_from_doctree
+from PIL import Image, ImageDraw, ImageFont
 from playwright.sync_api import sync_playwright
 from rst_budoux import parse_all_sentences
 from rst_budoux.cli.html import CustomHTMLWriter
@@ -76,6 +77,24 @@ def main():  # noqa: D103
         page.screenshot(path=env_dir / "without-budoux.png")
         page.goto(f"file://{env_dir / 'with-budoux.html'}")
         page.screenshot(path=env_dir / "with-budoux.png")
+    # Combine image
+    font = ImageFont.truetype("NotoSansCJK-Regular.ttc", 18)
+    img = Image.new("RGBA", size=[400, 300], color=(255, 237, 179, 180))
+    img_source = Image.open(env_dir / "source.png")
+    img.paste(Image.new("RGB", size=[250, 110], color="blue"), (65, 175))
+    img.paste(img_source, (70, 180))
+    img_with = Image.open(env_dir / "with-budoux.png")
+    img.paste(Image.new("RGB", size=[180, 110], color="green"), (205, 15))
+    img.paste(img_with, (210, 20))
+    text_with = ImageDraw.Draw(img)
+    text_with.text((210, 130), "↑ with rst-budoux", "black", font=font)
+    img_without = Image.open(env_dir / "without-budoux.png")
+    img.paste(Image.new("RGB", size=[180, 110], color="green"), (15, 15))
+    img.paste(img_without, (20, 20))
+    text_without = ImageDraw.Draw(img)
+    text_without.text((50, 130), "docutils only ↑", "black", font=font)
+    with (ROOT / "mv.png").open("wb") as fp:
+        img.save(fp, "PNG")
 
 
 if __name__ == "__main__":

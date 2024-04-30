@@ -45,6 +45,7 @@ markupsafe==2.1.5
 packaging==24.0
     # via pytest
     # via sphinx
+pillow==10.3.0
 platformdirs==4.2.1
     # via esbonio
 playwright==1.43.0
