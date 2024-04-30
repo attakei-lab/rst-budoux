@@ -1,0 +1,13 @@
+%(head_prefix)s
+<style>
+p {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+</style>
+%(head)s
+%(body_prefix)s
+%(body_pre_docinfo)s
+%(docinfo)s
+%(body)s
+%(body_suffix)s
