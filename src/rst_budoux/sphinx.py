@@ -1,0 +1,1 @@
+"""Implementation as Sphinx-extension."""

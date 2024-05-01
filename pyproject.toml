@@ -38,6 +38,11 @@ Issues = "https://github.com/attakei-lab/rst-budoux/issues"
 "rst-budoux2html" = "rst_budoux.cli.html:main"
 "rst-budoux2pseudoxml" = "rst_budoux.cli.psuedoxml:main"
 
+[project.optional-dependencies]
+sphinx = [
+    "sphinx==7.*",
+]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -49,6 +54,7 @@ dev-dependencies = [
     "pytest~=8.2.0",
     "playwright~=1.43.0",
     "pillow~=10.3.0",
+    "sphinx[test]==7.*",
 ]
 
 [tool.rye.scripts]
