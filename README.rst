@@ -10,6 +10,10 @@ Text splitter in reStructuredText by BudouX.
      <img src="https://github.com/attakei-lab/rst-budoux/blob/main/mv.png" >
    </div>
 
+.. note::
+
+   `日本語での説明があります。 <https://github.com/attakei-lab/rst-budoux/blob/main/README_ja.rst> `_
+
 Example
 =======
 
