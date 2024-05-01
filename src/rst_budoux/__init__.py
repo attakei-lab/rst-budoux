@@ -2,6 +2,8 @@
 import budoux
 from docutils import nodes
 
+__version__ = "0.0.0"
+
 
 class WordBreak(nodes.Element):
     """A node to explicit that breakpoint of sentence."""
