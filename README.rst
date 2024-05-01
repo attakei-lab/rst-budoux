@@ -4,6 +4,9 @@ rst-budoux
 
 Text splitter in reStructuredText by BudouX.
 
+.. image:: mv.png
+   :align: center
+
 Example
 =======
 
