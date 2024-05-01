@@ -4,8 +4,11 @@ rst-budoux
 
 Text splitter in reStructuredText by BudouX.
 
-.. figure:: mv.png
-   :align: center
+.. raw:: html
+
+   <div align="center">
+     <img src="https://github.com/attakei-lab/rst-budoux/blob/env/upgrade-readme/mv.png" >
+   </div>
 
 Example
 =======
