@@ -7,7 +7,7 @@ Text splitter in reStructuredText by BudouX.
 .. raw:: html
 
    <div align="center">
-     <img src="https://github.com/attakei-lab/rst-budoux/blob/env/upgrade-readme/mv.png" >
+     <img src="https://github.com/attakei-lab/rst-budoux/blob/main/mv.png" >
    </div>
 
 Example
