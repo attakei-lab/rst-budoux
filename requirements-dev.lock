@@ -10,11 +10,16 @@
 -e file:.
 alabaster==0.7.16
     # via sphinx
+anyio==4.3.0
+    # via starlette
+    # via watchfiles
 attrs==23.2.0
     # via cattrs
     # via lsprotocol
 babel==2.14.0
     # via sphinx
+beautifulsoup4==4.12.3
+    # via furo
 budoux==0.6.2
     # via rst-budoux
 cattrs==23.2.3
@@ -24,6 +29,10 @@ certifi==2024.2.2
     # via requests
 charset-normalizer==3.3.2
     # via requests
+click==8.1.7
+    # via uvicorn
+colorama==0.4.6
+    # via sphinx-autobuild
 cython==3.0.10
     # via sphinx
 defusedxml==0.7.1
@@ -32,9 +41,13 @@ docutils==0.21.2
     # via rst-budoux
     # via sphinx
 esbonio==0.16.4
+furo==2024.4.27
 greenlet==3.0.3
     # via playwright
+h11==0.14.0
+    # via uvicorn
 idna==3.7
+    # via anyio
     # via requests
 imagesize==1.4.1
     # via sphinx
@@ -60,6 +73,7 @@ pyee==11.1.0
 pygls==1.3.1
     # via esbonio
 pygments==2.17.2
+    # via furo
     # via sphinx
 pyspellchecker==0.8.1
     # via esbonio
@@ -69,11 +83,21 @@ requests==2.31.0
     # via sphinx
 setuptools==69.5.1
     # via sphinx
+sniffio==1.3.1
+    # via anyio
 snowballstemmer==2.2.0
     # via sphinx
+soupsieve==2.5
+    # via beautifulsoup4
 sphinx==7.3.7
     # via esbonio
+    # via furo
     # via rst-budoux
+    # via sphinx-autobuild
+    # via sphinx-basic-ng
+sphinx-autobuild==2024.4.16
+sphinx-basic-ng==1.0.0b2
+    # via furo
 sphinxcontrib-applehelp==1.0.8
     # via sphinx
 sphinxcontrib-devhelp==1.0.6
@@ -86,7 +110,15 @@ sphinxcontrib-qthelp==1.0.7
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.10
     # via sphinx
+starlette==0.37.2
+    # via sphinx-autobuild
 typing-extensions==4.11.0
     # via pyee
 urllib3==2.2.1
     # via requests
+uvicorn==0.29.0
+    # via sphinx-autobuild
+watchfiles==0.21.0
+    # via sphinx-autobuild
+websockets==12.0
+    # via sphinx-autobuild

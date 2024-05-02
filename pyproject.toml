@@ -55,6 +55,8 @@ dev-dependencies = [
     "playwright~=1.43.0",
     "pillow~=10.3.0",
     "sphinx[test]==7.*",
+    "furo~=2024.4.27",
+    "sphinx-autobuild~=2024.4.16",
 ]
 
 [tool.rye.scripts]
@@ -62,6 +64,7 @@ setup = {chain = ["setup:sync", "setup:pre-commit"]}
 "setup:sync" = "rye sync --no-lock --all-features"
 "setup:pre-commit" = "pre-commit install"
 test = "pytest"
+doc = "make -C doc"
 
 [tool.ruff.lint]
 select = ["C90", "D", "E", "F", "I", "W"]
