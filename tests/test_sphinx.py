@@ -17,3 +17,13 @@ def test_parsed_document(app: SphinxTestApp):
     html = app.outdir / "ja.html"
     data = html.read_text()
     assert "\u200b" in data
+
+
+@pytest.mark.sphinx("html", confoverrides={"budoux_separator": "<wbr>"})
+def test_change_separator(app: SphinxTestApp):
+    """Test that it passes with rst-budoux extension."""
+    app.build()
+    html = app.outdir / "ja.html"
+    data = html.read_text()
+    assert "\u200b" not in data
+    assert "<wbr>" in data
