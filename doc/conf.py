@@ -16,4 +16,10 @@ html_static_path = ["_static"]
 
 # -- Options for extensions
 # - rst_budoux.sphinx
-budoux_separator = "<wbr>"
+# budoux_separator = "<wbr>"
+budoux_additional_style = """
+body {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+"""

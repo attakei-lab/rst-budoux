@@ -1,5 +1,7 @@
 """Implementation as Sphinx-extension."""
 
+from typing import Optional
+
 import budoux
 from docutils.writers._html_base import HTMLTranslator
 from sphinx.application import Sphinx
@@ -22,10 +24,26 @@ def _insert_word_break(app: Sphinx, doctree: nodes.document) -> nodes.document:
     return parse_all_sentences(parser, doctree)
 
 
+def _insert_additional_style(
+    app: Sphinx,
+    pagename: str,
+    templatename: str,
+    context: dict,
+    doctree: nodes.document,
+) -> Optional[str]:
+    if not app.config.budoux_additional_style:
+        return
+    metatags = context.get("metatags", "")
+    metatags += f"<style>{app.config.budoux_additional_style}</style>"
+    context["metatags"] = metatags
+
+
 def setup(app: Sphinx):  # noqa: D103
     app.add_config_value("budoux_separator", "\u200b", "env")
+    app.add_config_value("budoux_additional_style", None, "env", [str, None])
     app.connect("config-inited", _configure_visitor)
     app.connect("doctree-read", _insert_word_break)
+    app.connect("html-page-context", _insert_additional_style)
     return {
         "version": __version__,
         "env_version": 1,
