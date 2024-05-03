@@ -6,13 +6,19 @@
 
 pipを始めとした、パッケージ管理ツールでインストール出来ます。
 
-.. code:: console
+.. tabs::
 
-   pip install rst-budoux
+   .. tab:: pip
 
-.. code:: console
+      .. code:: console
 
-   rye add rst-budoux
+         pip install rst-budoux
+
+   .. tab:: Rye
+
+      .. code:: console
+
+         rye add rst-budoux
 
 Sphinxの使用を前提としている場合は、optional-dependenciesを指定してインストール出来ます。 [#]_
 

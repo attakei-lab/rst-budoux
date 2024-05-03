@@ -12,6 +12,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
+    "sphinx_tabs.tabs",
     "sphinx_toolbox.confval",
 ]
 templates_path = ["_templates"]
