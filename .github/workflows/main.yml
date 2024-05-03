@@ -26,6 +26,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.9', '3.10', '3.11', '3.12']
+        sphinx-version: ['5.*', '6.*', '7.*']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,6 +37,7 @@ jobs:
           pip install uv
           uv venv
           uv pip install -r requirements-dev.lock
+          uv pip install 'sphinx[test]==${{ matrix.sphinx-version }}'
       - name: Run tests
         run: |
           source .venv/bin/activate
