@@ -57,6 +57,7 @@ dev-dependencies = [
     "sphinx[test]==7.*",
     "furo~=2024.4.27",
     "sphinx-autobuild~=2024.4.16",
+    "sphinx-toolbox~=3.5.0",
 ]
 
 [tool.rye.scripts]
