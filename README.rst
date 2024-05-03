@@ -19,7 +19,7 @@ Text splitter in reStructuredText by BudouX.
 
 .. note::
 
-   `日本語での説明があります。 <https://github.com/attakei-lab/rst-budoux/blob/main/README_ja.rst> `_
+   `日本語での説明があります。 <https://github.com/attakei-lab/rst-budoux/blob/main/README_ja.rst>`_.
 
 Overview
 ========
