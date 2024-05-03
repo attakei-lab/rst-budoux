@@ -9,14 +9,14 @@ from sphinx.config import Config
 from sphinx.util.docutils import nodes
 
 from . import WordBreak, __version__, parse_all_sentences
-from .writers import html
+from .writers import depart_word_break
 
 
 def _configure_visitor(app: Sphinx, config: Config):
     def _visit_word_break(self: HTMLTranslator, node: WordBreak):
         self.body.append(config.budoux_separator)
 
-    app.add_node(WordBreak, html=(_visit_word_break, html.depart_word_break))
+    app.add_node(WordBreak, html=(_visit_word_break, depart_word_break))
 
 
 def _insert_word_break(app: Sphinx, doctree: nodes.document) -> nodes.document:

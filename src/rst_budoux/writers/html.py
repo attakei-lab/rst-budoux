@@ -15,8 +15,3 @@ def visit_word_break(self: HTMLTranslator, node: WordBreak):
         else DEFAULT_SEPARATOR
     )
     self.body.append(separator)
-
-
-def depart_word_break(self: HTMLTranslator, node: WordBreak):
-    """When depart from <word-break>, translator do nothing."""
-    pass

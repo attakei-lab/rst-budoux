@@ -9,11 +9,12 @@ from docutils.core import publish_doctree, publish_from_doctree
 from docutils.writers import html5_polyglot
 
 from .. import parse_all_sentences
-from ..writers import html
+from ..writers import depart_word_break
+from ..writers.html import DEFAULT_SEPARATOR, visit_word_break
 
 parser = argparse.ArgumentParser()
 parser.add_argument("src", type=Path)
-parser.add_argument("--budoux-separator", default=html.DEFAULT_SEPARATOR)
+parser.add_argument("--budoux-separator", default=DEFAULT_SEPARATOR)
 
 
 class CustomHTMLWriter(html5_polyglot.Writer):  # noqa: D101
@@ -22,7 +23,7 @@ class CustomHTMLWriter(html5_polyglot.Writer):  # noqa: D101
         budoux_separator=(
             "Separation text using on <word-break> node",
             ["--budoux-separator"],
-            {"default": html.DEFAULT_SEPARATOR},
+            {"default": DEFAULT_SEPARATOR},
         ),
     )
 
@@ -32,8 +33,8 @@ class CustomHTMLWriter(html5_polyglot.Writer):  # noqa: D101
 
 
 class CustomHTMLTranslator(html5_polyglot.HTMLTranslator):  # noqa: D101
-    visit_WordBreak = html.visit_word_break
-    depart_WordBreak = html.depart_word_break
+    visit_WordBreak = visit_word_break
+    depart_WordBreak = depart_word_break
 
 
 def main():  # noqa: D103
