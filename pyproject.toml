@@ -40,7 +40,7 @@ Issues = "https://github.com/attakei-lab/rst-budoux/issues"
 
 [project.optional-dependencies]
 sphinx = [
-    "sphinx==7.*",
+    "sphinx>=5",
 ]
 
 [build-system]
@@ -54,7 +54,7 @@ dev-dependencies = [
     "pytest~=8.2.0",
     "playwright~=1.43.0",
     "pillow~=10.3.0",
-    "sphinx[test]==7.*",
+    "sphinx[test]>=5",
     "furo~=2024.4.27",
     "sphinx-autobuild~=2024.4.16",
     "sphinx-toolbox~=3.5.0",
