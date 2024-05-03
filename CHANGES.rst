@@ -1,3 +1,5 @@
+.. This does not have root section
+
 v0.0.0
 ======
 
