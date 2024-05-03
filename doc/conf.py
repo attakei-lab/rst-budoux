@@ -7,6 +7,8 @@ release = "0.0.0"
 # -- General configuration
 extensions = [
     "rst_budoux.sphinx",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx_toolbox.confval",
 ]
@@ -20,6 +22,10 @@ html_theme = "furo"
 html_static_path = ["_static"]
 
 # -- Options for extensions
+# - sphinx.ext.intersphinx
+intersphinx_mapping = {
+    "docutils": ("https://sphinx-docutils.readthedocs.io/en/latest/", None)
+}
 # - sphinx.ext.todo
 todo_include_todos = True  # -- Options for extensions
 # - rst_budoux.sphinx

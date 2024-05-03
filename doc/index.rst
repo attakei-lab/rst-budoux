@@ -26,3 +26,4 @@ Home
    usage
    sphinx-extension
    changelogs
+   api

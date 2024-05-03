@@ -15,7 +15,11 @@ help:
 dev:
 	sphinx-autobuild -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/dirhtml" $(SPHINXOPTS) $(O)
 
-.PHONY: dev help Makefile
+apidoc:
+	rm -rf api
+	sphinx-apidoc -f -e -T -o api/ ../src/rst_budoux/
+
+.PHONY: apidoc dev help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
