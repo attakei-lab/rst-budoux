@@ -14,12 +14,13 @@ rst-budoux
 
 Text splitter in reStructuredText by BudouX.
 
-.. image:: https://github.com/attakei-lab/rst-budoux/blob/main/mv.png
+.. image:: https://raw.githubusercontent.com/attakei-lab/rst-budoux/main/mv.png
    :align: center
+   :width: 50%
 
 .. note::
 
-   `日本語での説明があります。 <https://github.com/attakei-lab/rst-budoux/blob/main/README_ja.rst>`_.
+   `日本語での説明があります。 <https://github.com/attakei-lab/rst-budoux/blob/main/README_ja.rst>`_
 
 Overview
 ========
