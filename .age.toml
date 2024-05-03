@@ -16,7 +16,7 @@ search = "__version__ = \"{{current_version}}\""
 replace = "__version__ = \"{{new_version}}\""
 
 [[files]]
-path = "CHANGES.rst"
+path = "CHANGELOG.rst"
 search = ".. This does not have root section"
 replace = """
 .. This does not have root section

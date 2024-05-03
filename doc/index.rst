@@ -25,5 +25,5 @@ Home
    installation
    usage
    sphinx-extension
-   changelogs
+   changes
    api

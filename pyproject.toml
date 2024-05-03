@@ -32,6 +32,7 @@ license = { text = "Apache-2.0" }
 
 [project.urls]
 repository = "https://github.com/attakei-lab/rst-budoux"
+changelog = "https://github.com/attakei-lab/rst-budoux/blob/main/CHANGELOG.rst"
 documentation = "https://rst-budoux.readthedocs.io/v0.0.0/"
 issues = "https://github.com/attakei-lab/rst-budoux/issues"
 

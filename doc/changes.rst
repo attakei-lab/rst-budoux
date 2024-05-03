@@ -2,4 +2,4 @@
 更新履歴
 ========
 
-.. include:: ../CHANGES.rst
+.. include:: ../CHANGELOG.rst
