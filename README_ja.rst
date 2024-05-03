@@ -72,8 +72,6 @@ docutilsの ``rst2pseudoxml`` を使うと、内部ではこのような構成�
 使い方
 ======
 
-.. note:: ここは予定を書いています。
-
 インストール
 ------------
 
@@ -107,7 +105,6 @@ Sphinxを経由しての利用例
       "rst_budoux.sphinx",
    ]
 
-   budoux_html_separator = "<wbr>"
    buxoux_html_append_style = """
        body {
            word-break: keep-all;
