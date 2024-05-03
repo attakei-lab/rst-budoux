@@ -1,5 +1,15 @@
 .. This does not have root section
 
+v0.1.1
+======
+
+:date: 2024-05-03 JST
+
+Others
+------
+
+* Fix refer to MV
+
 v0.1.0
 ======
 

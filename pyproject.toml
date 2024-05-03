@@ -1,6 +1,6 @@
 [project]
 name = "rst-budoux"
-version = "0.1.0"
+version = "0.1.1"
 description = "Text splitter in reStructuredText by BudouX"
 authors = [
     { name = "Kazuya Takei", email = "myself@attakei.net" }
@@ -33,7 +33,7 @@ license = { text = "Apache-2.0" }
 [project.urls]
 repository = "https://github.com/attakei-lab/rst-budoux"
 changelog = "https://github.com/attakei-lab/rst-budoux/blob/main/CHANGELOG.rst"
-documentation = "https://rst-budoux.readthedocs.io/v0.1.0/"
+documentation = "https://rst-budoux.readthedocs.io/v0.1.1/"
 issues = "https://github.com/attakei-lab/rst-budoux/issues"
 
 [project.scripts]

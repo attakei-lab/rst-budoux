@@ -1,2 +1,2 @@
-- Changelog is https://github.com/attakei-lab/rst-budoux/blob/v0.1.0/CHANGELOG.rst
-- You can source diff to https://github.com/attakei-lab/rst-budoux/compare/v0.0.0..v0.1.0
+- Changelog is https://github.com/attakei-lab/rst-budoux/blob/v0.1.1/CHANGELOG.rst
+- You can source diff to https://github.com/attakei-lab/rst-budoux/compare/v0.1.0..v0.1.1
