@@ -38,3 +38,15 @@ Fixes
 Others
 ------
 """
+
+[[files]]
+path = ".github/release-body.md"
+regex = true
+search = """
+- Changelog is https://github.com/attakei-lab/rst-budoux/blob/v{{ current_version }}/CHANGELOG.rst
+- You can source diff to (.+)
+"""
+replace = """
+- Changelog is https://github.com/attakei-lab/rst-budoux/blob/v{{ new_version }}/CHANGELOG.rst
+- You can source diff to https://github.com/attakei-lab/rst-budoux/compare/v{{ current_version }}..v{{ new_version }}
+"""
