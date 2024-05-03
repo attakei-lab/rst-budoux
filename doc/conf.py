@@ -1,8 +1,10 @@
+from rst_budoux import __version__
+
 # -- Project information
 project = "rst-budoux"
 copyright = "2024, Kazuya Takei"
 author = "Kazuya Takei"
-release = "0.0.0"
+release = __version__
 
 # -- General configuration
 extensions = [
