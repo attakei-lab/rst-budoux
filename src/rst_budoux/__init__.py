@@ -2,7 +2,7 @@
 import budoux
 from docutils import nodes
 
-__version__ = "0.0.0"
+__version__ = "0.1.0"
 
 
 class WordBreak(nodes.Element):
