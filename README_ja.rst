@@ -4,11 +4,8 @@ rst-budoux
 
 reStructuredTextのテキストを分かち書きするライブラリです。
 
-.. raw:: html
-
-   <div align="center">
-     <img src="https://github.com/attakei-lab/rst-budoux/blob/main/mv.png" >
-   </div>
+.. image:: https://github.com/attakei-lab/rst-budoux/blob/main/mv.png
+   :align: center
 
 概要
 ====
@@ -105,6 +102,7 @@ Sphinxを経由しての利用例
       "rst_budoux.sphinx",
    ]
 
+   budoux_html_separator = "<wbr>"
    buxoux_html_append_style = """
        body {
            word-break: keep-all;

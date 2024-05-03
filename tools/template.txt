@@ -3,6 +3,7 @@
 p {
   word-break: keep-all;
   overflow-wrap: anywhere;
+  font-size: 40px;
 }
 </style>
 %(head)s
