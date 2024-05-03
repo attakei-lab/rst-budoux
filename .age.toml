@@ -6,6 +6,11 @@ search = "version = \"{{current_version}}\""
 replace = "version = \"{{new_version}}\""
 
 [[files]]
+path = "pyproject.toml"
+search = "documentation = \"https://rst-budoux.readthedocs.io/v{{current_version}}/\""
+replace = "documentation = \"https://rst-budoux.readthedocs.io/v{{new_version}}/\""
+
+[[files]]
 path = "src/rst_budoux/__init__.py"
 search = "__version__ = \"{{current_version}}\""
 replace = "__version__ = \"{{new_version}}\""

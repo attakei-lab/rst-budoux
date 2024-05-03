@@ -31,6 +31,7 @@ requires-python = ">= 3.9"
 license = { text = "Apache-2.0" }
 
 [project.urls]
+documentation = "https://rst-budoux.readthedocs.io/v0.0.0/"
 Repository = "https://github.com/attakei-lab/rst-budoux"
 Issues = "https://github.com/attakei-lab/rst-budoux/issues"
 
