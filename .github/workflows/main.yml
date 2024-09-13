@@ -35,13 +35,11 @@ jobs:
       - name: Configure venv
         run: |
           pip install uv
-          uv venv
-          uv pip install -r requirements-dev.lock
+          uv sync
           uv pip install 'sphinx[test]==${{ matrix.sphinx-version }}'
       - name: Run tests
         run: |
-          source .venv/bin/activate
-          pytest
+          uv run pytest
   buildtest:
     runs-on: ubuntu-latest
     steps:
@@ -51,6 +49,8 @@ jobs:
           python-version: '3.12'
       - name: Build package
         run: |
+          pip install uv
+          uv sync
           pip install hatch twine
           hatch build
           twine check dist/*
